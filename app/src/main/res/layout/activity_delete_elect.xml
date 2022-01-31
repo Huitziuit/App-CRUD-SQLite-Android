@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteElect"
+    android:background="@color/newColor">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_default"
+        android:text="Eliminar electrodoméstico"
+        android:textSize="26sp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TI_delete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ID del electrodoméstico"
+        app:helperText="requerido"
+        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="@id/titulo"
+        app:layout_constraintEnd_toEndOf="@id/titulo"
+        android:layout_marginTop="28dp"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ID_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_delete"
+        android:layout_marginTop="40dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:text="Eliminar"
+        app:icon="@drawable/ic_delete"
+        app:layout_constraintTop_toBottomOf="@id/TI_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        app:icon="@drawable/ic_back"
+        app:layout_constraintTop_toBottomOf="@id/btn_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

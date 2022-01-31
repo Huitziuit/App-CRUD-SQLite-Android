@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".UpdateElect"
+    android:background="@color/newColor">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        >
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_default"
+            android:text="Actualizar electrodoméstico"
+            android:textSize="24sp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TI_ID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            app:helperText="requerido"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:layout_constraintTop_toBottomOf="@id/titulo"
+            app:layout_constraintStart_toStartOf="@id/titulo"
+            app:layout_constraintEnd_toEndOf="@id/titulo"
+            android:layout_marginTop="28dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/id_elect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TI_nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            app:helperText="requerido"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:layout_constraintTop_toBottomOf="@id/TI_ID"
+            app:layout_constraintStart_toStartOf="@id/titulo"
+            app:layout_constraintEnd_toEndOf="@id/titulo"
+            android:layout_marginTop="28dp"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombre_elec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TI_potencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Potencia (W)"
+            app:helperText="requerido"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:layout_constraintTop_toBottomOf="@id/TI_nombre"
+            app:layout_constraintStart_toStartOf="@id/titulo"
+            app:layout_constraintEnd_toEndOf="@id/titulo"
+            android:layout_marginTop="22dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/potencia_elec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TI_horas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Horas de uso al dia"
+            app:helperText="requerido"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:layout_constraintTop_toBottomOf="@id/TI_potencia"
+            app:layout_constraintStart_toStartOf="@id/titulo"
+            app:layout_constraintEnd_toEndOf="@id/titulo"
+            android:layout_marginTop="22dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/horas_elec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/CB_siempre_conectado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siempre enchufado"
+            app:layout_constraintStart_toStartOf="@id/titulo"
+            app:layout_constraintTop_toBottomOf="@id/TI_horas"
+            android:layout_marginTop="22dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            android:layout_marginTop="40dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:text="Actualizar"
+            app:icon="@drawable/ic_update"
+            app:layout_constraintTop_toBottomOf="@id/CB_siempre_conectado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            app:icon="@drawable/ic_back"
+            app:layout_constraintTop_toBottomOf="@id/btn_update"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

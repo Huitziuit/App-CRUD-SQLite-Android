@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">E3</string>
+    <string name="menuP">Menú principal</string>
+    <string name="menuP_Info">Ahorra electricidad midiendo el consumo eléctrico de tus electrodomésticos</string>
+</resources>
